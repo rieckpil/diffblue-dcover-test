@@ -2,12 +2,13 @@ package de.rieckpil.courses.book.management;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 import org.junit.jupiter.api.Test;
 
 class BookDiffblueTest {
   /**
-  * Methods under test: 
-  * 
+  * Methods under test:
+  *
   * <ul>
   *   <li>default or parameterless constructor of {@link Book}
   *   <li>{@link Book#setAuthor(String)}
@@ -104,8 +105,8 @@ class BookDiffblueTest {
   }
 
   /**
-   * Methods under test: 
-   * 
+   * Methods under test:
+   *
    * <ul>
    *   <li>{@link Book#equals(Object)}
    *   <li>{@link Book#hashCode()}
@@ -132,8 +133,8 @@ class BookDiffblueTest {
   }
 
   /**
-   * Methods under test: 
-   * 
+   * Methods under test:
+   *
    * <ul>
    *   <li>{@link Book#equals(Object)}
    *   <li>{@link Book#hashCode()}

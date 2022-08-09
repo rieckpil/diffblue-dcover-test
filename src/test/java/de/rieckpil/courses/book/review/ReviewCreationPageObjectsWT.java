@@ -13,7 +13,6 @@ import de.rieckpil.courses.pages.NewReviewPage;
 import de.rieckpil.courses.pages.ReviewListPage;
 import org.apache.commons.lang3.SystemUtils;
 import org.junit.jupiter.api.AfterEach;
-import org.apache.commons.lang3.SystemUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.firefox.FirefoxOptions;

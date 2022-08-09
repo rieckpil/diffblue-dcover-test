@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 
 class ReviewDiffblueTest {
   /**
-  * Methods under test: 
-  * 
+  * Methods under test:
+  *
   * <ul>
   *   <li>default or parameterless constructor of {@link Review}
   *   <li>{@link Review#setBook(Book)}

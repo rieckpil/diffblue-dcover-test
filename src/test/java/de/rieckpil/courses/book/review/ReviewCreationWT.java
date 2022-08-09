@@ -3,11 +3,8 @@ package de.rieckpil.courses.book.review;
 import java.io.File;
 import java.util.logging.Level;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import java.util.logging.Level;
 
 import de.rieckpil.courses.AbstractWebTest;
 import de.rieckpil.courses.book.management.Book;

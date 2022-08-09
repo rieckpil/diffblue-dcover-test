@@ -1,19 +1,13 @@
 package de.rieckpil.courses.book.review;
 
-import de.rieckpil.courses.book.management.Book;
 import de.rieckpil.courses.book.management.BookRepository;
-import de.rieckpil.courses.book.management.User;
 import de.rieckpil.courses.book.management.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class ReviewServiceTest {

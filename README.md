@@ -46,7 +46,7 @@ Maven Command Executing: /bin/sh -c cd '/Users/rieckpil/Development/git/diffblue
 16:37:15.727 INFO  Gathering methods to test...
 16:37:20.470 INFO  Found 205 callable methods in 27 classes
 
-Hanging 10 min for 
+Hanging 10 min for
 
 16:38:25.105 INFO   [4/27] de.rieckpil.courses.book.management.BookManagementService
 16:38:25.106 INFO   [4/27]   Tests created: 1
