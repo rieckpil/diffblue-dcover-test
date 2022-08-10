@@ -5,10 +5,14 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 import java.time.LocalDateTime;
 import org.junit.jupiter.api.Test;
 
+/** rieckpil
+ * Same comment here as before.
+ * Testing the constructor/getter/setter of a "data/domain" object may be questionable.
+ */
 class UserDiffblueTest {
   /**
-  * Methods under test: 
-  * 
+  * Methods under test:
+  *
   * <ul>
   *   <li>default or parameterless constructor of {@link User}
   *   <li>{@link User#setCreatedAt(LocalDateTime)}

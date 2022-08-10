@@ -12,6 +12,15 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+/** rieckpil
+ *
+ * The tested method has an if-statement, so I would
+ * expect to have at least two tests to cover both branches.
+ * Diffblue only generated one.
+ *
+ * JUnit & Mockito would have also been sufficient, no need for an ApplicationContext
+ *
+ */
 @ContextConfiguration(classes = {UserService.class})
 @ExtendWith(SpringExtension.class)
 class UserServiceDiffblueTest {
@@ -20,6 +29,7 @@ class UserServiceDiffblueTest {
 
   @Autowired
   private UserService userService;
+
   /**
   * Method under test: {@link UserService#getOrCreateUser(String, String)}
   */
