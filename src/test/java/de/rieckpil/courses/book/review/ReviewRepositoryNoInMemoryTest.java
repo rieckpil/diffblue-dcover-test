@@ -11,6 +11,11 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @DataJpaTest
 @Testcontainers(disabledWithoutDocker = true)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -35,9 +40,29 @@ class ReviewRepositoryNoInMemoryTest {
   @Test
   @Sql(scripts = "/scripts/INIT_REVIEW_EACH_BOOK.sql")
   void shouldGetTwoReviewStatisticsWhenDatabaseContainsTwoBooksWithReview() {
+
+    List<ReviewStatistic> result = cut.getReviewStatistics();
+
+    assertEquals(3, cut.count());
+    assertEquals(2, result.size());
+
+    result.forEach(reviewStatistic -> {
+      System.out.println("ReviewStatistic");
+      System.out.println(reviewStatistic.getId());
+      System.out.println(reviewStatistic.getAvg());
+      System.out.println(reviewStatistic.getIsbn());
+      System.out.println(reviewStatistic.getRatings());
+      System.out.println("");
+    });
+
+    assertEquals(2, result.get(0).getRatings());
+    assertEquals(2, result.get(0).getId());
+    assertEquals(new BigDecimal("3.00"), result.get(0).getAvg());
   }
 
   @Test
   void databaseShouldBeEmpty() {
+    assertEquals(0, cut.count());
   }
+
 }
