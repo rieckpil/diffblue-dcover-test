@@ -26,6 +26,24 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+/** rieckpil
+ * The testCreateBookReview, testCreateBookReview2, testCreateBookReview3
+ * together with the longer test methods due to the required setup,
+ * make it hard to understand what use case is actually tested.
+ *
+ * Furthermore, the variable names also use the class name and then
+ * an incremented value: book, book1, book2.
+ *
+ * This is a maintenance and understanding nightmare (code is read more than written).
+ *
+ * I try to give them meaningful names like newBook, existingBook, userWithLackingPermissions.
+ *
+ * I know that's hard to come up with an AI but still wanted to give this feedback.
+ *
+ * Also, I see that passed parameters are mocked. This can result quite fast in a
+ * "mocking-hell" making the test brittle as they don't allow refactorings.
+ *
+ */
 @ContextConfiguration(classes = {ReviewService.class})
 @ExtendWith(SpringExtension.class)
 class ReviewServiceDiffblueTest {
