@@ -3,10 +3,15 @@ package de.rieckpil.courses.book.management;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
+/** rieckpil
+ * Code coverage addicts may be happy that Diffblue creates tests
+ * for their getter/setter but I personally don't add test unless there's
+ * some business logic in them (which shouldn't be there in general).
+ */
 class BookSynchronizationDiffblueTest {
   /**
-  * Methods under test: 
-  * 
+  * Methods under test:
+  *
   * <ul>
   *   <li>{@link BookSynchronization#BookSynchronization(String)}
   *   <li>{@link BookSynchronization#setIsbn(String)}

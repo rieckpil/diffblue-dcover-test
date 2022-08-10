@@ -19,6 +19,10 @@ import org.springframework.messaging.MessagingException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+/** rieckpil
+ * Similar to other unit tests, Mockito & JUnit would have been enough here.
+ * No need to start a minimal ApplicationContext
+ */
 @ContextConfiguration(classes = {InitialBookCreator.class, String.class})
 @ExtendWith(SpringExtension.class)
 class InitialBookCreatorDiffblueTest {
@@ -30,6 +34,14 @@ class InitialBookCreatorDiffblueTest {
 
   @MockBean
   private QueueMessagingTemplate queueMessagingTemplate;
+
+  /** rieckpil
+   *  The verification of this test seems not that valuable.
+   *
+   *  We could have verified there's no interaction with the QueueMessagingTemplate
+   *  if the database is already populated with data.
+   */
+
   /**
   * Method under test: {@link InitialBookCreator#initialize(ApplicationReadyEvent)}
   */
